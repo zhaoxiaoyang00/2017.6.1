@@ -1,0 +1,150 @@
+@import url('reset.css');
+.full(@w,@h,@bc){
+    width: @w;
+    height:@h;
+    background: @bc;
+}
+.box(@tan:vertical){
+    display: -webkit-box;
+    -webkit-box-orient: @tan;
+}
+html,body,.content{
+    .full(100%,100%,none);
+}
+html{
+ font-size: 62.5%;
+ }
+ .content{
+ 	.box;
+ 	header{
+ 		.box(horizontal);
+ 		.full(100%,4.5rem,none);
+ 		line-height: 4.5rem;
+ 		border-bottom: 1px solid #dcdcdc;
+ 		.head_left{
+ 			img{
+ 				.full(1rem,auto,none);
+ 				margin-left: 1rem;
+ 				margin-right: 2rem;
+                    padding-top: 1.2rem;
+ 			}
+ 		}
+ 		.head_center{
+ 			-webkit-box-flex:1;
+ 			margin-top: 5px;
+ 			.full(100%,3.5rem,#eeeeee);
+ 			border-radius: 5px;
+ 			.box(horizontal);
+ 			overflow: hidden;
+ 			img{
+ 				.full(1.5rem,auto,none);
+ 				margin-left: 1rem;
+ 				margin-right: 1rem;
+ 			}
+ 			input{
+ 				display: block;
+ 				-webkit-box-flex:1;
+                                            .full(100%,100%,none);
+                                            outline: none;
+                                            border: none;
+ 			}
+      .img_one{
+          padding-bottom: 2px;
+      }
+ 		}
+ 		.head_right{
+ 			span{
+ 				color: #ff7170;
+ 				font-size: 14px;
+ 			}
+ 			margin-right: 1rem;
+ 			margin-left: 1.7rem;
+ 		}
+ 	}
+ 	section{
+ 		-webkit-box-flex:1;
+ 		overflow-y: auto;
+ 		padding-bottom: 50px;
+ 		.sect_top{
+ 			.full(100%,6.8rem,none);
+ 			border-bottom: 1px solid #d9d9d9;
+ 			position: relative;
+ 			dl{
+ 				.box(horizontal);
+ 				img{
+ 					.full(4rem,auto,none);
+ 					margin-top: 1rem;
+ 					margin-left: 1rem;
+ 					margin-right: 1rem;
+ 				}
+ 				dd{
+ 					margin-top: 1rem;
+ 					h2{
+ 						font-size: 1.6rem;
+ 						font-weight: bold;
+ 					}
+ 				}
+ 		 .yi_guan{
+                      	position: absolute;
+                      	right: 1rem;
+                      	top: 1.8rem;
+                      	.full(5.9rem,2.6rem,none);
+                      	border: 1px solid #e5e5e5;
+                      	border-radius: 10px;
+                      	text-align: center;
+                      	line-height: 2.6rem;
+                      	color: #999999;
+                      }
+ 			}
+ 		}
+ 		.sect_two{
+ 			position: relative;
+ 			.full(100%,17.6rem,none);
+                                 border-bottom: 1px solid #e5e5e5;
+                                 dl{
+                                 	.box(horizontal);
+                                 	img{
+                                 		.full(4rem,auto,none);
+ 					margin-top: 1rem;
+ 					margin-left: 1rem;
+ 					margin-right: 1rem;
+                                 	}
+                                 	dd{
+                                 		margin-top: 1rem;
+ 					h2{
+ 						font-size: 1.6rem;
+ 						font-weight: bold;
+ 					}
+                                 	}
+                                 }
+                                 ul{
+                                 	margin-left: 6.5rem;
+                                 	.box(horizontal);
+                                 	li{
+                                                 display: block;
+                                                 .full(5rem,1.6rem,none);
+                                                 border:1px solid #b1b1b1;
+                                                 margin-right: 0.5rem;
+                                                 text-align: center;
+                                                 border-radius: 5px;
+                                 	}
+                                 }
+                                  .yi_guanz{
+                      	position: absolute;
+                      	right: 1rem;
+                      	top: 1.8rem;
+                      	.full(5.9rem,2.6rem,none);
+                      	border: 1px solid #ff4342;
+                      	border-radius: 10px;
+                      	text-align: center;
+                      	line-height: 2.6rem;
+                      	color: #ff4342;
+                      }
+                      p{
+                      	padding-left: 1rem;
+                      	padding-right: 1rem;
+                      	margin-top: 1.5rem;
+                      }
+ 		}
+ 	}
+ }

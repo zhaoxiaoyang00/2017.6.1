@@ -1,0 +1,170 @@
+@import url('reset.css');
+.full(@w,@h,@bc){
+    width: @w;
+    height:@h;
+    background: @bc;
+}
+.box(@tan:vertical){
+    display: -webkit-box;
+    -webkit-box-orient: @tan;
+}
+html,body,.contenter{
+    .full(100%,100%,none);
+}
+html{
+ font-size: 62.5%;
+ }
+ .contenter{
+ 	.box;
+ 	header{
+ 		.full(100%,4rem,none);
+ 		border-bottom: 1px solid #d8d8d8;
+ 		.box(horizontal);
+ 	   .head_left{
+                      .full(0,100%,none);
+ 	   	img{
+ 	   		.full(auto,1.5rem,none);
+ 	   		padding-top: 1.3rem;
+ 	   		vertical-align: middle;
+ 	   		margin-left: 2rem;
+ 	   	}
+ 	   }
+              .head_center{
+              	 -webkit-box-flex: 1;
+              	 text-align: center;
+              	 line-height: 4rem;
+              	h2{
+              		 font-size: 1.8rem;
+              	            font-weight: bold;
+              	}
+              }
+ 	}
+ 	section{
+                -webkit-box-flex:1;
+                 overflow-y: auto;
+                 &::-webkit-scrollbar{
+	            width: 0px;
+	        }
+                .full(100%,auto,#f5f5f5);
+                .center_top{
+                	.full(100%,5.5rem,nono);
+                	padding:1rem 1rem 0 1rem;
+                	box-sizing: border-box;
+                	.search_top{
+                		.full(100%,3.7rem,white);
+                                 border-radius: 7px;
+                                 .box(horizontal);
+                                 overflow: hidden;
+                                 span{
+                                   display: block;
+                                    img{
+                                    	margin-top: 10px;
+                                    	.full(1.8rem,auto,none);
+                                    	padding-left: 2rem;
+                                    	padding-right: 1.6rem
+                                    }
+                                 }
+                                input{
+                                	    display: block;
+		                .full(100%,100%,none); 
+		                outline: none;
+		                border:none;
+                                }
+                	}
+                }
+                .my_guan{
+                	.full(100%,34.4rem,white);
+                	p{
+
+                		.full(100%,5.4rem,none);
+                		border-bottom: 1px solid #e5e5e5;
+                	           b{
+                	           	line-height: 5.4rem;
+                	           	margin-left: 1rem;
+                	           	font-size: 15px;
+                	           	font-weight: bold;
+                	           }
+                	           img{
+                	           	float: right;
+                	           	margin-top: 2.3rem;
+                	           	padding-right: 1rem;
+                	           }
+                	}
+                	dl{
+                		.full(100%,7.8rem,none);
+                		border-bottom: 1px solid #e5e5e5;
+                                 position: relative;
+                		.box(horizontal);
+                		img{
+                		   .full(auto,3.8rem,none);
+                		   margin-left: 1rem;
+                		   margin-top: 1.7rem;
+                		   margin-right: 1.5rem;
+                		}
+                		dd{
+                		   margin-top: 1.7rem;	
+                		   h2{
+                		   	font-size: 15px;
+                		   	font-weight: bold;
+                		   	margin-bottom: 7px;
+                		   }
+                		}
+                      .yi_guan{
+                      	position: absolute;
+                      	right: 1rem;
+                      	top: 2.5rem;
+                      	.full(5.9rem,2.6rem,none);
+                      	border: 1px solid #e5e5e5;
+                      	border-radius: 10px;
+                      	text-align: center;
+                      	line-height: 2.6rem;
+                      	color: #999999;
+                      }
+                	}
+                }
+                .zhi_yuan{
+                	.full(100%,3.5rem,none);
+                	.box(horizontal);
+                	 line-height: 3.5rem;
+                	span{
+                	  display: block;
+                	   .full(0.5rem,2.6rem,#ff4342);	
+                	   margin-left: 1rem;
+                	   margin-right: 1rem;
+                          margin-top: 5px;
+                	}
+                	h3{
+                		font-size: 14px;
+                		color: #666666;
+                	}
+                }
+                .zhiyuan{
+                	li{
+                		.full(100%,5.6rem,white);
+                		border-bottom: 1px solid #cccccc;
+                		line-height: 5.6rem;
+                		padding-left: 1rem;
+                		font-size: 15px;
+                		color: #333333;
+                    box-sizing: border-box;
+                	&:nth-child(3){
+                		border: none;
+                	}
+                	}
+                }
+ 	}
+ 	footer{
+ 		.full(100%,5rem,none);
+ 		border-top: 1px solid #d8d8d8;
+ 		.box(horizontal);
+ 		dl{
+ 			 -webkit-box-flex: 1;
+                                 text-align: center;
+ 			width: 0px;
+ 		     img{
+ 			.full(auto,2.5rem,none);
+ 			margin-top: 0.3rem;
+ 		    }
+ 		}
+ 	}
+ }

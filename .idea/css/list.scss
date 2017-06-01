@@ -1,0 +1,190 @@
+@import url('reset.css');
+@mixin full($w,$h,$br){
+    width:$w;
+    height:$h;
+    background: $br;
+}
+@mixin box($ver:vertical){
+    display: -webkit-box;
+    -webkit-box-orient: $ver;
+}
+html,body,.swrepp{
+    @include full(100%,100%,none);
+}
+html{
+    font-size: 62.5%;
+}
+.swrepp{
+	@include box;
+	header{
+              @include full(100%,4rem,none);
+              border-bottom:1px solid #d2d2d2;
+              	 @include box(horizontal);
+ 	   .head_left{
+                       @include full(0,100%,none);
+ 	   	img{
+ 	   		 @include full(auto,1.5rem,none);
+ 	   		padding-top: 1.3rem;
+ 	   		vertical-align: middle;
+ 	   		margin-left: 2rem;
+ 	   	}
+ 	   }
+              .head_center{
+              	 -webkit-box-flex: 1;
+              	 text-align: center;
+              	 line-height: 4rem;
+              	h2{
+              		 font-size: 1.8rem;
+              	            font-weight: bold;
+              	}
+              }
+	}
+	section{
+              -webkit-box-flex:1;
+                 overflow-y: auto;
+                 &::-webkit-scrollbar{
+	            width: 0px;
+	        }
+                 @include full(100%,auto,none);
+                .center_top{
+                	 @include full(100%,5.5rem,#f5f5f5);
+                	padding:1rem 1rem 0 1rem;
+                	box-sizing: border-box;
+                	.search_top{
+                		 @include full(100%,3.7rem,white);
+                                 border-radius: 7px;
+                                 @include box(horizontal);
+                                 overflow: hidden;
+                                 span{
+                                   display: block;
+                                    img{
+                                    	margin-top: 10px;
+                                    	 @include full(1.8rem,auto,none);
+                                    	padding-left: 2rem;
+                                    	padding-right: 1.6rem
+                                    }
+                                 }
+                                input{
+                                	    display: block;
+		                 @include full(100%,100%,none); 
+		                outline: none;
+		                border:none;
+                                }
+                	}
+                }
+                .titles{
+                    li{
+                    	 display:black;
+                    	 @include full(100%,5.4rem,none);
+                    	 border-bottom:1px solid #cccccc;
+                       line-height: 5.4rem;
+                       padding-left:1rem;
+                        box-sizing: border-box;
+                       font-size:14px;
+                      font-weight: 400;
+                     img{
+                         float:right;
+                         padding-right:1rem;
+                         margin-top:2rem;
+                     }
+                      &:nth-child(2){
+                         border:none;
+                      }
+                    }
+                }
+                 .zhi_yuan{
+                  @include full(100%,3.5rem,#f5f5f5);
+                    @include box(horizontal);
+                   line-height: 3.5rem;
+                  span{
+                    display: block;
+                     @include full(0.5rem,2.6rem,#ff4342);  
+                     margin-left: 1rem;
+                     margin-right: 1rem;
+                          margin-top: 5px;
+                  }
+                  h3{
+                    font-size: 14px;
+                    color: #666666;
+                  }
+                }
+                .sect_two{
+                    border-top: 1px solid #e5e5e5;
+      position: relative;
+      @include full(100%,17.6rem,none);
+                                 border-bottom: 1px solid #e5e5e5;
+                                 dl{
+                                  @include box(horizontal);
+                                  img{
+                                    @include full(4rem,auto,none);
+          margin-top: 1rem;
+          margin-left: 1rem;
+          margin-right: 1rem;
+                                  }
+                                  dd{
+                                    margin-top: 1rem;
+          h2{
+            font-size: 1.6rem;
+            font-weight: bold;
+          }
+                                  }
+                                 }
+                                 ul{
+                                  margin-left: 6.5rem;
+                                 @include box(horizontal);
+                                  li{
+                                                 display: block;
+                                                 @include full(5rem,1.6rem,none);
+                                                 border:1px solid #b1b1b1;
+                                                 margin-right: 0.5rem;
+                                                 text-align: center;
+                                                 border-radius: 5px;
+                                  }
+                                 }
+                                  .yi_guanz{
+                        position: absolute;
+                        right: 1rem;
+                        top: 1.8rem;
+                       @include full(5.9rem,2.6rem,none);
+                        border: 1px solid #ff4342;
+                        border-radius: 10px;
+                        text-align: center;
+                        line-height: 2.6rem;
+                        color: #ff4342;
+                      }
+                      p{
+                        padding-left: 1rem;
+                        padding-right: 1rem;
+                        margin-top: 1.5rem;
+                      }
+         }
+         .duan{
+          @include full(100%,5rem,none);
+         border-bottom:1px solid #e4e4e4;
+        line-height: 5rem;
+          text-align: center;
+         }
+         .zhiye{
+             @include full(100%,5.4rem,none);
+             line-height:5.4rem;
+             font-size:14px;
+             font-weight: 400;
+             padding-left:1rem;
+             box-sizing:border-box;
+         }
+	}
+	footer{
+            @include full(100%,5rem,none);
+            border-top:1px solid #e4e4e4;
+ 		 @include box(horizontal);
+ 		dl{
+ 			 -webkit-box-flex: 1;
+                                 text-align: center;
+ 			width: 0px;
+ 		     img{
+ 			 @include full(auto,2.5rem,none);
+ 			margin-top: 0.3rem;
+ 		    }
+ 		}
+	}
+}
